@@ -3,10 +3,8 @@ const Subscriber = require('./models/Subscriber');
 
 const MONGODB_URI = 'mongodb://127.0.0.1:27017/subscribersDB';
 
-mongoose.connect(MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-}).then(() => {
+mongoose.connect(MONGODB_URI)
+.then(() => {
   console.log('Connected to MongoDB');
   createSubscribers();
 }).catch(error => {
