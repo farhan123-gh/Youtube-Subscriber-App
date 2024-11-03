@@ -2,6 +2,14 @@ const express = require('express');
 const Subscriber = require('../models/Subscriber');
 const router = express.Router();
 
+
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+
+
+
 // GET all subscribers
 router.get('/', async (req, res) => {
   try {
@@ -34,6 +42,5 @@ router.get('/:id', async (req, res) => {
     res.status(400).json({ message: error.message });
   }
 });
-
 
 module.exports = router;
