@@ -50,9 +50,9 @@
         <h1>Welcome to Youtube Subscriber App!</h1>
     <div class="container">
         <h2>Get Youtube Subscriber</h2>
-        <a href="http://localhost:3000/subscribers">Get All Subscribers</a>
+        <a href="/subscribers">Get All Subscribers</a>
         <hr>
-        <a href="http://localhost:3000/subscribers/names">Get Subscribers Names</a>
+        <a href="/subscribers/names">Get Subscribers Names</a>
         <hr>
         <!-- Form to submit Subscriber ID to server -->
         <form id="subscriberForm" method="get">
@@ -68,16 +68,16 @@
 </div>
 
     <script>
-        function searchSubscriber() {
-            const subscriberId = document.getElementById('subscriberId').value;
-            if (subscriberId) {
-                // Set the form action to specific subscriber URL with the entered ID
-                document.getElementById('subscriberForm').action = `http://localhost:3000/subscribers/${subscriberId}`;
-                document.getElementById('subscriberForm').submit();
-            } else {
-                alert("Please enter a Subscriber ID.");
-            }
-        }
+       function searchSubscriber() {
+    const subscriberId = document.getElementById('subscriberId').value;
+    if (subscriberId) {
+        document.getElementById('subscriberForm').action = `/subscribers/${subscriberId}`;
+        document.getElementById('subscriberForm').submit();
+    } else {
+        alert("Please enter a Subscriber ID.");
+    }
+}
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>

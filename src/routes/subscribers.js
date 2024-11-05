@@ -1,14 +1,6 @@
 const express = require('express');
 const Subscriber = require('../models/Subscriber');
 const router = express.Router();
-const app = express();
-
-
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
-
 
 
 // GET all subscribers
